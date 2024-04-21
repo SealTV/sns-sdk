@@ -418,7 +418,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "6b3a5ca650bb3e42e45102c7e6fbef507a6bf93c45a63fd62565fe981e932f2d"
 dependencies = [
  "bonfida-macros",
- "borsh",
+ "borsh 0.9.3",
  "bytemuck",
  "pyth-sdk-solana",
  "solana-program",
@@ -433,6 +433,15 @@ checksum = "15bf3650200d8bffa99015595e10f1fbd17de07abbc25bb067da79e769939bfa"
 dependencies = [
  "borsh-derive",
  "hashbrown 0.11.2",
+]
+
+[[package]]
+name = "borsh"
+version = "1.0.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "4e6cb63579996213e822f6d828b0a47e1d23b1e8708f52d18a6b1af5670dd207"
+dependencies = [
+ "cfg_aliases",
 ]
 
 [[package]]
@@ -570,6 +579,12 @@ name = "cfg-if"
 version = "1.0.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "baf1de4339761588bc0619e3cbc0120ee582ebb74b53b4efbf79117bd2da40fd"
+
+[[package]]
+name = "cfg_aliases"
+version = "0.1.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "fd16c4719339c4530435d38e511904438d07cce7950afa3718a84ac36c10e89e"
 
 [[package]]
 name = "chrono"
@@ -1404,9 +1419,9 @@ checksum = "4271d37baee1b8c7e4b708028c57d816cf9d2434acb33a549475f78c181f6253"
 
 [[package]]
 name = "h2"
-version = "0.3.22"
+version = "0.3.26"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "4d6250322ef6e60f93f9a2162799302cd6f68f79f6e5d85c8c16f14d1d958178"
+checksum = "81fe527a889e1532da5c525686d96d4c2e74cdd345badf8dfef9f6b39dd5f5e8"
 dependencies = [
  "bytes",
  "fnv",
@@ -1568,7 +1583,7 @@ dependencies = [
  "httpdate",
  "itoa",
  "pin-project-lite",
- "socket2 0.5.5",
+ "socket2 0.4.10",
  "tokio",
  "tower-service",
  "tracing",
@@ -1975,9 +1990,9 @@ dependencies = [
 
 [[package]]
 name = "mio"
-version = "0.8.10"
+version = "0.8.11"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "8f3d0b296e374a4e6f3c7b0a1f5a51d748a0d34c85e7dc48fc3fa9a87657fe09"
+checksum = "a4a650543ca06a924e8b371db273b2756685faae30f8487da1b56505a8f78b0c"
 dependencies = [
  "libc",
  "wasi 0.11.0+wasi-snapshot-preview1",
@@ -1990,7 +2005,7 @@ version = "1.4.3-beta.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "81a34d740606a10a9dac7507d0c9025d72e0ce311c68ae85b6634982cf69a9c6"
 dependencies = [
- "borsh",
+ "borsh 0.9.3",
  "bytemuck",
  "mpl-token-metadata-context-derive 0.2.1",
  "num-derive 0.3.3",
@@ -2010,7 +2025,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "654976568c99887549e1291e7b7e55ae31a70732e56ebb25cb1cdfc08c018333"
 dependencies = [
  "arrayref",
- "borsh",
+ "borsh 0.9.3",
  "mpl-token-auth-rules",
  "mpl-token-metadata-context-derive 0.3.0",
  "mpl-utils",
@@ -2060,7 +2075,7 @@ version = "1.0.0"
 source = "git+https://github.com/Bonfida/name-tokenizer#565e73255d2dd8194703e704206522030ab2468e"
 dependencies = [
  "bonfida-utils",
- "borsh",
+ "borsh 0.9.3",
  "enumflags2",
  "mpl-token-metadata",
  "num-derive 0.3.3",
@@ -2535,7 +2550,7 @@ version = "0.4.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "f262b88557d8f152a247e1be786a8359d63112fac0a6e49fa41082a8ef789e8d"
 dependencies = [
- "borsh",
+ "borsh 0.9.3",
  "borsh-derive",
  "hex",
  "schemars",
@@ -2548,7 +2563,7 @@ version = "0.4.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "2aed1a0b714f91cb104cc025eb806782e30aa63c23259724e79efd609294a2c9"
 dependencies = [
- "borsh",
+ "borsh 0.9.3",
  "borsh-derive",
  "bytemuck",
  "num-derive 0.3.3",
@@ -3333,7 +3348,7 @@ version = "1.3.5"
 dependencies = [
  "anyhow",
  "base64 0.21.5",
- "borsh",
+ "borsh 1.0.0",
  "clap 4.4.11",
  "console",
  "indicatif 0.17.7",
@@ -3357,7 +3372,7 @@ version = "1.3.5"
 dependencies = [
  "bech32",
  "bonfida-utils",
- "borsh",
+ "borsh 1.0.0",
  "bytemuck",
  "derive_more",
  "dotenv",
@@ -3711,7 +3726,7 @@ dependencies = [
  "bincode",
  "bitflags 1.3.2",
  "blake3",
- "borsh",
+ "borsh 0.9.3",
  "borsh-derive",
  "bs58",
  "bv",
@@ -3816,7 +3831,7 @@ dependencies = [
  "base64 0.13.1",
  "bincode",
  "bitflags 1.3.2",
- "borsh",
+ "borsh 0.9.3",
  "bs58",
  "bytemuck",
  "byteorder",
@@ -3908,7 +3923,7 @@ dependencies = [
  "Inflector",
  "base64 0.13.1",
  "bincode",
- "borsh",
+ "borsh 0.9.3",
  "bs58",
  "lazy_static",
  "log",
@@ -4025,7 +4040,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "978dba3bcbe88d0c2c58366c254d9ea41c5f73357e72fc0bdee4d6b5fc99c8f4"
 dependencies = [
  "assert_matches",
- "borsh",
+ "borsh 0.9.3",
  "num-derive 0.3.3",
  "num-traits",
  "solana-program",
@@ -4049,7 +4064,7 @@ version = "0.2.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "4c2920a0762e3fdbd02a24469787d9217f658776502265a9b99903557be28adf"
 dependencies = [
- "borsh",
+ "borsh 0.9.3",
  "num-derive 0.3.3",
  "num-traits",
  "solana-program",
