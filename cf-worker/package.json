@@ -4,7 +4,7 @@
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20230221.0",
     "typescript": "^4.9.5",
-    "wrangler": "3.4.0"
+    "wrangler": "3.19.0"
   },
   "private": true,
   "scripts": {
@@ -14,8 +14,8 @@
   "dependencies": {
     "@bonfida/spl-name-service": "^1.0.6",
     "@solana/spl-token": "^0.3.7",
-    "@solana/web3.js": "^1.73.3",
-    "hono": "^3.4.0",
+    "@solana/web3.js": "^1.78.8",
+    "hono": "^4.2.7",
     "tweetnacl": "^1.0.3"
   }
 }
